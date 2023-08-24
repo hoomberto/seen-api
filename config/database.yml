@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: seen_be_production
-  username: seen_be
-  password: <%= ENV['SEEN_BE_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
