@@ -36,3 +36,9 @@
 #   rake 'purge_followers'
 #   # runner "FluxFollower.redistribute"
 # end
+
+set :timezone, "America/New_York"
+
+every 1.day, at: '4:05 pm' do
+    runner "FluxFollower.distribute"
+end
